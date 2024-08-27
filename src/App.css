@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "ClashDisplay-Variable";
+  src: url("../fonts/ClashDisplay-Variable.woff2") format("woff2"),
+    url("../fonts/ClashDisplay-Variable.woff") format("woff"),
+    url("../fonts/ClashDisplay-Variable.ttf") format("truetype");
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+/* root  */
+:root {
+  --primary-color: #24252d;
+  --secondary-color: #f0f4f8;
+  --accent-color: #e67e22;
+
+  --font: "Plus Jakarta Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: var(--font);
+}
+
+
+h1,h2,h3{
+  font-family: var(--font2);
+}

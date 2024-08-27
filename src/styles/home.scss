@@ -1,0 +1,147 @@
+// Import Global Styles
+@import "./../assets/styles/global.scss";
+
+.home {
+    width: 100%;
+    position: relative;
+
+    .hero {
+        width: 100%;
+        position: relative;
+        background: $secondary-color;
+        background: #233457 url(./../assets/images/bg/grids.jpg);
+        // background: #233457 url(./../assets/images/bg/wood.png);
+        background-size: cover;
+        background-position: center;
+        // background-attachment: fixed;
+
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 6rem 0;
+
+        .content {
+            width: 100%;
+            max-width: 700px;
+
+            h1 {
+                color: $light-color;
+                font-size: 2.5rem;
+                line-height: 1;
+                font-family: $secondary-font;
+            }
+
+            p {
+                color: $light-color;
+                margin-top: 1rem;
+                font-weight: 400;
+                opacity: 0.6;
+            }
+
+            .action {
+                gap: 1rem;
+                display: flex;
+                margin: 1rem 0;
+                position: relative;
+
+                a {
+                    font-weight: 500;
+                    padding: 0.8rem 1rem;
+                    color: $light-color;
+                    border: 1.5px solid;
+                    border-radius: 0.333rem;
+                    font-family: $primary-font;
+
+                    &:first-child {
+                        background: $light-color;
+                        color: $primary-color;
+                        border-color: $light-color;
+                    }
+
+                    &:hover {
+                        color: $light-color;
+                        background: transparent;
+                        box-shadow: 0 6px 2px 6px $secondary-color;
+                    }
+                }
+            }
+
+            .join {
+                gap: 1rem;
+                display: flex;
+                opacity: 0.333;
+                align-items: center;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    max-width: 40px;
+                }
+
+                .text {
+                    color: $light-color;
+                    font-weight: 500;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    .brands {
+        .content {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+        }
+
+        .title {
+            background: $primary-color;
+            padding: 2rem;
+            padding-left: 10%;
+
+            h2 {
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: $light-color;
+                text-transform: uppercase;
+            }
+        }
+
+        .slider {
+            position: relative;
+            width: 100%;
+            display: flex;
+            overflow: hidden;
+
+            .slides {
+                display: flex;
+                transition: transform 0.5s ease-in-out; // Smooth transition
+                width: calc(100% * 10); // Adjust based on number of items
+
+                .item {
+                    min-width: calc(100% / 4); // Show 4 items at a time
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    padding: 10px;
+
+                    img {
+                        height: auto;
+                        width: 100%;
+                        max-height: 30px;
+                    }
+
+                    .star {
+                        position: relative;
+                    }
+                }
+            }
+        }
+    }
+}

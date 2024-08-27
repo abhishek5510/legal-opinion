@@ -1,0 +1,31 @@
+// src/assets/styles/_fonts.scss
+
+// Helvetica Neue Font Faces
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('/fonts/helvetica-neue/HelveticaNeueBlack.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('/fonts/helvetica-neue/HelveticaNeueBlackItalic.otf') format('opentype');
+    font-weight: 900;
+    font-style: italic;
+}
+// Other weights and styles for Helvetica Neue...
+
+// Mena Grotesk Font Faces
+@font-face {
+    font-family: 'Mena Grotesk';
+    src: url('/fonts/mena-grotesk/MenaGroteskBlack.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Mena Grotesk';
+    src: url('/fonts/mena-grotesk/MenaGroteskBlackItalic.otf') format('opentype');
+    font-weight: 900;
+    font-style: italic;
+}
+// Other weights and styles for Mena Grotesk...

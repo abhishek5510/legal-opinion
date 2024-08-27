@@ -1,0 +1,384 @@
+/* Import Global Styles */
+@import "./../assets/styles/global.scss";
+
+.header {
+    width: 100%;
+    padding: 0.666rem 0;
+    background: $primary-color;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transform: translateY(0);
+
+    &.hidden {
+        transform: translateY(-100%);
+    }
+
+    &.scrolled {
+        background: transparent;
+    }
+
+    .content {
+        gap: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+            a {
+                img {
+                    width: 100%;
+                    height: auto;
+                    max-width: 130px;
+                    transition: $transition;
+
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+
+        .links {
+            ul {
+                gap: 1rem;
+                display: flex;
+
+                li {
+                    a {
+                        display: flex;
+                        padding: 1rem 0;
+                        font-size: 1rem;
+                        font-weight: 500;
+                        position: relative;
+                        align-content: center;
+                        color: $light-color;
+                        font-family: $primary-font;
+                        text-transform: capitalize;
+                        transition: $transition;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            bottom: -0.65rem;
+                            left: 0;
+                            width: 100%;
+                            height: 0.1rem;
+                            transform: scaleX(0);
+                            transform-origin: left;
+                            background: $accent-color;
+                            transition: $transition;
+                        }
+
+                        &:hover,
+                        &.active {
+                            color: $accent-color;
+
+                            &::before {
+                                transform: scaleX(100%);
+                                transform-origin: left;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .action {
+            font-family: $primary-font;
+
+            ul {
+                gap: 1rem;
+                display: flex;
+                align-items: center;
+
+                li {
+                    a {
+                        font-weight: 500;
+                        border: 1px solid;
+                        padding: 0.78rem 1rem;
+                        color: $light-color;
+                        border-radius: 0.666rem;
+
+                        &.book {
+                            background: $light-color;
+                            border-color: $light-color;
+                            color: $primary-color;
+                        }
+
+                        &:hover {
+                            color: $primary-color;
+                            background: $accent-color;
+                            border-color: transparent;
+                            box-shadow: 0 6px 2px 6px $secondary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    width: 100%;
+    padding: 6rem 0 0;
+    position: relative;
+    background: $primary-color;
+
+    .top {
+        width: 100%;
+        position: relative;
+
+        .content {
+            width: 100%;
+            position: relative;
+            color: $light-color;
+
+            .title {
+                display: block;
+                position: relative;
+                margin-bottom: 3rem;
+
+                span {
+                    opacity: 0.3;
+                    line-height: 1.2;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+
+                h2 {
+                    font-size: 2rem;
+                    line-height: 1;
+                    font-family: $secondary-color;
+                }
+            }
+
+            .line1 {
+                gap: 2rem;
+                display: grid;
+                padding-bottom: 1rem;
+                grid-template-columns: 3fr 1fr;
+
+                .form {
+                    width: 100%;
+                    position: relative;
+
+                    form {
+                        width: 100%;
+                        position: relative;
+
+                        .inputs {
+                            gap: 1rem;
+                            width: 100%;
+                            display: grid;
+                            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                        }
+
+                        .input-group {
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+
+                            label {
+                                display: block;
+                                font-size: 1rem;
+                                color: $light-color;
+                                padding: 0.666rem 0.1rem;
+                                font-family: $primary-font;
+                            }
+
+                            input,
+                            select,
+                            textarea {
+                                width: 100%;
+                                font-size: 1rem;
+                                overflow: hidden;
+                                padding: 0.8rem 1rem;
+                                color: $light-color;
+                                border-radius: 0.2rem;
+                                font-family: $primary-font;
+                                background: $secondary-color;
+                            }
+
+                            textarea {
+                                height: 80px;
+                                width: 100%;
+                                resize: none;
+                            }
+                        }
+
+                        button {
+                            margin-top: 1rem;
+                            display: block;
+                            font-weight: 600;
+                            font-size: 1.1rem;
+                            border-radius: 0.2rem;
+                            padding: 1rem 1.5rem;
+                            color: $primary-color;
+                            background: $accent-color;
+                            transition: $transition;
+
+                            &:hover {
+                                cursor: pointer;
+                                background: $light-color;
+                                box-shadow: 0 6px 2px 6px $secondary-color;
+                            }
+                        }
+                    }
+                }
+
+                .right {
+                    width: 100%;
+                    position: relative;
+
+                    .emails {
+                        gap: 2rem;
+                        width: 100%;
+                        display: grid;
+                        grid-template-columns: repeat(1fr, 1);
+
+                        .email {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+
+                            span {
+                                font-size: 1.1rem;
+                                padding: 0.333rem 0;
+                                display: block;
+                                font-weight: 600;
+                                color: $light-color;
+                            }
+
+                            a {
+                                opacity: 0.7;
+                                display: block;
+                                padding: 0.2rem;
+                                font-weight: 400;
+                                color: $light-color;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .line {
+                gap: 2rem;
+                width: 100%;
+                display: grid;
+                padding: 2rem 0;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+                .box {
+                    width: 100%;
+                    position: relative;
+
+                    h2 {
+                        font-size: 1.4rem;
+                        font-weight: 600;
+                        color: $light-color;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        max-width: 150px;
+                    }
+
+                    p {
+                        margin-top: 0.333rem;
+                        font-size: 1rem;
+                        color: $light-color;
+                    }
+
+                    ul {
+                        margin-top: 1rem;
+
+                        li {
+                            a {
+                                color: $light-color;
+                                font-weight: 400;
+                                padding: 0.2rem 0;
+                                display: block;
+                                opacity: 0.6;
+                                cursor: cursor;
+
+                                &:hover {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+
+                        &.social {
+                            gap: 1rem;
+                            display: flex;
+
+                            a {
+                                font-size: 1.2rem;
+
+                                &:hover {
+                                    color: $accent-color;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom {
+        width: 100%;
+        padding: 1rem 0;
+        position: relative;
+        background: $secondary-color;
+
+        .content {
+            gap: 2rem;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+            .left{
+                width: 100%;
+
+                p{
+                    color: $light-color;
+                    font-size: 1rem;
+                }
+            }
+
+            .right{
+                width: 100%;
+                display: flex;
+                justify-content: end;
+
+                ul{
+                    gap: 1rem;
+                    display: flex;
+                    align-items: center;
+
+                    a{
+                        opacity: .6;
+                        font-size: 1rem;
+                        font-weight: 400;
+                        color: $light-color;
+
+                        &:hover{
+                            opacity: 1;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
