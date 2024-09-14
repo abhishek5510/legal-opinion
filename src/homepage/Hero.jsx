@@ -8,7 +8,7 @@ function Hero() {
       <div className="hero">
         <div className="container">
           <div className="content">
-            <h1>Seamless digital solutions that connect you to the orld.</h1>
+            <h1>Seamless digital solutions that connect you to the world.</h1>
             <p>
               At Kampus Agency, we specialize in crafting innovative software,
               creative designs, and impactful digital strategies that help
@@ -27,7 +27,7 @@ function Hero() {
                 <img src={join} alt="Join" />
               </span>
               <span className="text">
-                Join Iwmvictor, Anny CI, K.A and 12K+ others
+                Join Iwmvictor, Ange MT, K.A and 12K+ others
               </span>
             </div>
           </div>

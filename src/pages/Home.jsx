@@ -1,13 +1,16 @@
 import React from "react";
 import { HelmetProvider, Helmet } from "react-helmet-async";
 
-import './../styles/home.scss'
+import "./../styles/home.scss";
 import Hero from "../homepage/Hero";
+import Cta from "./../homepage/Cta";
+import About from "../homepage/About";
 import Work from "./../homepage/Work";
-import Brands from "../homepage/Brands";
+import Blog from "./../homepage/Blog";
 import Service from "./../homepage/Service";
 import Courses from "./../homepage/Courses";
-import Solutions from "./../homepage/Solutions";
+import Resources from "./../homepage/Resources";
+import Testimonials from "./../homepage/Testimonials";
 
 function Home() {
   return (
@@ -41,11 +44,15 @@ function Home() {
         <>
           <div className="home">
             <Hero />
-            <Brands />
             <Service />
             <Work />
             <Courses />
-            <Solutions />
+            <About />
+            <Testimonials />
+            <Blog />
+            <Cta />
+            <Resources />
+            {/* hero, service, portfolio, featured, about us, testimonials, blog, cta, resources, */}
           </div>
         </>
       </HelmetProvider>

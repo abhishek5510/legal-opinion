@@ -1,5 +1,7 @@
 import React from "react";
 import image1 from "./../assets/images/courses/course-1.jpeg";
+import { GoShare } from "react-icons/go";
+import { FaUsers } from "react-icons/fa6";
 
 const courses = [
   {
@@ -37,8 +39,8 @@ function Courses() {
             <div>
               <h2>Courses to scale your design knowledge</h2>
               <p>
-                Learn from the best and take your design skills to the next
-                level.
+                Stay ahead in the digital age through learning from the best and
+                take your design skills to the next level.
               </p>
             </div>
             <div>
@@ -51,12 +53,23 @@ function Courses() {
                 <div key={course.id} className="grid">
                   <div className="image">
                     <img src={course.image} alt={course.title} />
+                    <span className="price">${course.price} </span>
                   </div>
                   <div className="detail">
+                    <span className="category">design</span>
                     <h3>{course.title}</h3>
-                    <p>{course.description}</p>
-                    <span className="price">${course.price}</span>
-                    <a href="/checkout" className="btn">Enroll Now</a>
+                    <span className="mentor">mentor name</span>
+                    <span className="class">
+                      <FaUsers /> 21+ Students waiting for you
+                    </span>
+                  </div>
+                  <div className="action">
+                    <a href="/checkout" className="btn">
+                      Join
+                    </a>
+                    <a href="share" className="btn1">
+                      Share <GoShare />
+                    </a>
                   </div>
                 </div>
               ))}
