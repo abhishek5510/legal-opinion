@@ -1,0 +1,93 @@
+@import "./../assets/styles/global.scss";
+
+::-webkit-scrollbar {
+    width: 0.1rem;
+    background: $secondary-color;
+}
+
+.service-page {
+    width: 100%;
+    position: relative;
+    color: $light-color;
+    background: $primary-color;
+
+    .hero {
+        width: 100%;
+        position: relative;
+        height: 24rem;
+        background: linear-gradient(0deg, $primary-color 6%, $accent-color 100%);
+        // background: url(./../assets/images/bg/grid.jpg);
+        background-size: cover;
+        background-position: center;
+
+        .container {
+            height: 24rem;
+            position: relative;
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            max-width: 650px;
+            transform: translateY(-30%);
+
+            span {
+                color: $primary-color;
+                text-transform: uppercase;
+                font-weight: 600;
+                display: block;
+                margin-bottom: 0.4rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                color: $light-color;
+                margin-bottom: 0.6rem;
+            }
+
+            p {
+                font-size: 1rem;
+                opacity: 0.8;
+                margin-bottom: 1rem;
+            }
+
+            a {
+                padding: .7rem 1.2rem;
+                display: inline-flex;
+                color: $primary-color;
+                background: $accent-color;
+                border-radius: .3rem;
+
+                &:hover{
+                    color: $light-color;
+                    border-radius: 50% 10% 50% 10% / 10% 50% 10% 50%;
+                }
+            }
+        }
+    }
+
+    .service{
+        width: 100%;
+        position: relative;
+
+        .content{
+            gap: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+
+            .box{
+                padding: 1rem;
+                backdrop-filter: blur(1);
+                color: var(--light-color);
+                background: rgba(255, 255, 255, 0.1);
+                box-shadow: 0 1px 1px 0 rgba(11, 37, 48, 0.2);
+
+                h3{
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}

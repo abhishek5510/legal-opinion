@@ -1,6 +1,11 @@
 import React from "react";
 import { HelmetProvider, Helmet } from "react-helmet-async";
 
+import './../styles/service.scss'
+import Hero from './../servicepage/Hero.jsx'
+import Service from './../servicepage/Service.jsx'
+
+
 function Services() {
   return (
     <>
@@ -32,7 +37,12 @@ function Services() {
           />
           <link rel="canonical" href="https://www.kampusagency.com/services" />
         </Helmet>
-        <div>Services Page</div>
+        <div>
+          <div className="service-page">
+            <Hero/>
+            <Service/>
+          </div>
+        </div>
       </HelmetProvider>
     </>
   );
