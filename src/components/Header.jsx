@@ -20,66 +20,66 @@ function Header() {
           <div className="links">
             <ul>
               <li>
-                <Link
-                  to="/services"
+                <a
+                  href="/services"
                   className={currentPath === "/services" ? "active" : ""}
                 >
                   Services
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
-                  to="/portfolio"
-                  className={currentPath === "/portfolio" ? "active" : ""}
+                <a
+                  href="/projects"
+                  className={currentPath === "/projects" ? "active" : ""}
                 >
                   Portfolio
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
-                  to="/about"
+                <a
+                  href="/about"
                   className={currentPath === "/about" ? "active" : ""}
                 >
                   About
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
-                  to="/blog"
+                <a
+                  href="/blog"
                   className={currentPath === "/blog" ? "active" : ""}
                 >
                   Blog
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
-                  to="/resources"
+                <a
+                  href="/resources"
                   className={currentPath === "/resources" ? "active" : ""}
                 >
                   Resources
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
-                  to="/contact"
+                <a
+                  href="/contact"
                   className={currentPath === "/contact" ? "active" : ""}
                 >
                   Contact Us
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
           <div className="action">
             <ul>
               <li>
-                <Link to="/signin" className="auth">
+                <a href="/signin" className="auth">
                   Sign In
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/book-a-call" className="book">
+                <a href="/book-a-call" className="book">
                   Book a Call
-                </Link>
+                </a>
               </li>
             </ul>
           </div>

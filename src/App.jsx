@@ -15,6 +15,7 @@ import Courses from "./pages/Courses";
 import Services from "./pages/Services";
 import Portfolio from "./pages/Portfolio";
 import Testimonials from "./pages/Testimonials";
+import Resources from "./pages/Resources";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -34,6 +35,7 @@ function App() {
             <Route path="contacts" element={<Contact />} />
             <Route path="services" element={<Services />} />
             <Route path="projects" element={<Portfolio />} />
+            <Route path="resources" element={<Resources />} />
             <Route path="testimonials" element={<Testimonials />} />
           </Route>
         </Routes>

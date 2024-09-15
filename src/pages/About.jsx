@@ -25,7 +25,7 @@ function About() {
           />
           <meta
             property="og:image"
-            content="[URL to about page featured image]"
+            content="/kampus/about/*"
           />
           <meta
             property="og:url"

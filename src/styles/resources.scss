@@ -1,0 +1,238 @@
+@import "./../assets/styles/global.scss";
+
+::-webkit-scrollbar {
+    width: 0.1rem;
+    background: $secondary-color;
+}
+
+.resource-page {
+    width: 100%;
+    position: relative;
+
+    .hero {
+        height: 21rem;
+        background: $primary-color url(./../assets/images/blog/01.jpg);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(1);
+            background: rgba(11, 37, 48, 0.8);
+        }
+
+        .container {
+            position: relative;
+            height: 21rem;
+            z-index: 1;
+        }
+
+        .content {
+            width: 100%;
+            max-width: 650px;
+            position: absolute;
+            color: $light-color;
+            top: 50%;
+            left: 0;
+            transform: translateY(-20%);
+
+            span {
+                display: block;
+                margin-bottom: 0.6rem;
+                color: $accent-color;
+                text-transform: uppercase;
+                font-size: $font-size-small;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                color: $light-color;
+                margin-bottom: 0.4rem;
+            }
+
+            p {
+                font-size: $font-size-small;
+                color: $light-color;
+            }
+        }
+    }
+
+    .resource {
+        width: 100%;
+        padding: 4rem 0;
+        position: relative;
+        background: $light-color;
+
+        .filter-controls {
+            gap: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+            color: $primary-color;
+            justify-content: space-between;
+
+            input,
+            select {
+                padding: 10px;
+                font-size: 1rem;
+                border: 1px solid;
+                border-radius: 5px;
+                min-width: 200px;
+            }
+            input {
+                width: 350px;
+            }
+        }
+
+        .page-action {
+            gap: 2rem;
+            width: 100%;
+            display: grid;
+            margin-bottom: 1rem;
+            align-items: center;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+            .resource-count {
+                font-size: 1.2rem;
+                color: $accent-color;
+            }
+
+            .pagination-controls {
+                gap: .6rem;
+                display: flex;
+                justify-content: end;
+
+                button {
+                    padding: 0.6rem .8rem;
+                    background: transparent;
+                    display: flex;
+                    border: 1.5px solid;
+                    border-radius: .6rem;
+                    color: $primary-color;
+                    transition: $transition;
+                    font-size: $font-size-body;
+                    border-radius: 10% 50% / 50% 10%;
+
+                    &.active{
+                        color: $light-color;
+                        border-radius: .6rem;
+                        border-color: $primary-color;
+                        background: $primary-color;
+                    }
+
+                    &:hover{
+                        color: $light-color;
+                        border-radius: 1rem;
+                        background: $accent-color;
+                        border-color: $accent-color;
+                    }
+                }
+            }
+        }
+
+        .resource-grid {
+            gap: 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        .resource-card {
+            display: flex;
+            max-width: 350px;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            backdrop-filter: blur(1);
+            color: var(--light-color);
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 1px 1px 0 rgba(11, 37, 48, 0.2);
+
+            .image {
+                width: 100%;
+                height: 200px;
+                position: relative;
+
+                img {
+                    max-width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                .category {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    font-size: 14px;
+                    font-weight: 300;
+                    color: $light-color;
+                    padding: 0.2rem 0.6rem;
+                    border-radius: 0 0 0.4rem 0;
+                    background: $primary-color;
+                }
+
+                span {
+                    position: absolute;
+                    left: 1rem;
+                    bottom: 0;
+                    display: block;
+                    color: $primary-color;
+                    padding: 0.2rem 0.6rem;
+                    background: $light-color;
+                    border-radius: 0.3rem 0.3rem 0 0;
+                }
+            }
+
+            .card-content {
+                width: 100%;
+                padding: 1rem;
+                height: fit-content;
+                position: relative;
+
+                h3 {
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    padding-bottom: 1rem;
+                }
+
+                .card-actions {
+                    gap: 1rem;
+                    display: flex;
+                    align-items: center;
+
+                    button {
+                        gap: 0.3rem;
+                        display: flex;
+                        padding: 0.6rem;
+                        border: 2px solid;
+                        transition: $transition;
+                        border-color: $primary-color;
+
+                        &.button {
+                            padding: 0.6rem 1.2rem;
+                            color: $light-color;
+                            border-radius: 0.24rem;
+                            background: $primary-color;
+                        }
+
+                        &.share {
+                            border-radius: 0.6rem;
+                        }
+
+                        &:hover {
+                            color: $light-color;
+                            background: $accent-color;
+                            border-color: transparent;
+                            border-radius: 50% 10% / 10% 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

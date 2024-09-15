@@ -1,6 +1,11 @@
 import React from "react";
 import { HelmetProvider, Helmet } from "react-helmet-async";
 
+import './../styles/portfolio.scss'
+import Hero from "../portfoliopage/Hero";
+import Works from "../portfoliopage/Works";
+
+
 function Portfolio() {
   return (
     <>
@@ -30,7 +35,12 @@ function Portfolio() {
           />
           <link rel="canonical" href="https://www.kampusagency.com/portfolio" />
         </Helmet>
-        <div>Portfolio/Work/Projects Page</div>
+        <div className="portfolio-page">
+          <Hero/>
+          <Works/>
+        </div>
+          
+        
       </HelmetProvider>
     </>
   );
