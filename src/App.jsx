@@ -14,8 +14,8 @@ import Contact from "./pages/Contact";
 import Courses from "./pages/Courses";
 import Services from "./pages/Services";
 import Portfolio from "./pages/Portfolio";
-import Testimonials from "./pages/Testimonials";
 import Resources from "./pages/Resources";
+import Testimonials from "./homepage/WrappedTestimonials";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -26,7 +26,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="cases" element={<Case />} />
             <Route path="*" element={<NotFound />} />
             <Route path="about" element={<About />} />
             <Route path="articles" element={<Blog />} />

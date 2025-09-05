@@ -4,7 +4,7 @@
 .header {
     width: 100%;
     padding: 0.666rem 0;
-    background: $primary-color;
+    background: #FAA18F;
     transition:
         background-color 0.3s ease,
         transform 0.3s ease;
@@ -32,11 +32,12 @@
         .logo {
             a {
                 img {
-                    width: 100%;
-                    height: auto;
-                    max-width: 130px;
-                    transition: $transition;
-
+                    width: 20vw;         // logo takes 20% of viewport width
+      max-width: 150px;    // cap so it doesn’t get too big
+      height: auto;        // keep proportions
+      max-height: 50px;    // prevents logo from being too tall
+      object-fit: contain; // no distortion
+      transition: $transition;
                     &:hover {
                         opacity: 0.7;
                     }

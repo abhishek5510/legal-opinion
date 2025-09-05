@@ -8,38 +8,38 @@ import { MdClose } from "react-icons/md";
 
 const testimonials = [
   {
-    text: "This site looks great. Congratulations to all the staff!",
-    name: "Jane Doe",
-    role: "Designer",
-    company: "Doe Designs",
+    text: "The entire property paperwork was handled smoothly—I didn’t have to lift a finger.",
+    name: "Madhu",
+    role: "Patna",
+    company: "Bihar",
     image: user1,
   },
   {
-    text: "Exceptional IT consultancy and website development. Highly recommended!",
-    name: "Viateur Nshimiyumuremyi",
-    role: "Physiotherapist",
-    company: "Viateur Physio",
+    text: "Their legal opinion gave me instant clarity and saved me from a risky deal.",
+    name: "Vinayak Sharma",
+    role: "Agra",
+    company: "Uttar Pradesh",
     image: user2,
   },
   {
-    text: "Impressed by their marketing strategies. Kampus Agency takes it to another level.",
-    name: "Paul Smith",
-    role: "Marketing Lead",
-    company: "Smith Marketing",
+    text: "Getting two expert opinions side by side made my decision quick and confident.",
+    name: "Chandrashekhar Nath Dubey",
+    role: "Bengaluru",
+    company: "Karnataka",
     image: user3,
   },
   {
-    text: "Their development team is highly skilled, reliable, and efficient.",
-    name: "Emily Watson",
-    role: "CTO",
-    company: "Tech Solutions",
+    text: "Buyer insights were eye-opening and helped me negotiate smarter.",
+    name: "Ankur Vatsa",
+    role: "Bengaluru",
+    company: "Karnataka",
     image: user4,
   },
   {
-    text: "Amazing service, great design, and a professional team!",
-    name: "Michael Brown",
-    role: "CEO",
-    company: "Brown Ventures",
+    text: "Their land insurance gave me true peace of mind—no fear of hidden legal costs.",
+    name: "Anukant Kumar",
+    role: "Bengaluru",
+    company: "Karnataka",
     image: user5,
   },
 ];
@@ -109,7 +109,7 @@ const Testimonials = () => {
       <div className="testimonial">
         <div className="container">
           <div className="sec-title">
-            <h1 className="section-title">Trusted by companies worldwide</h1>
+            <h1 className="section-title">Trusted by property buyers across India.</h1>
             <span>
               <button onClick={() => setAddReview(true)}>
                 Leave us a review

@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import "./../styles/Components.scss";
-import logo from "./../assets/images/brand/logo-light.svg";
+import logo from "./../assets/images/brand/logo.svg";
 import {
-  TbBrandGithub,
+  TbBrandLinkedin,
   TbBrandInstagram,
   TbBrandLinktree,
   TbBrandX,
@@ -22,7 +22,6 @@ function Footer() {
               <div className="line1">
                 <div className="form">
                   <div className="title">
-                    <span>say hello</span>
                     <h2>Get in touch with us</h2>
                   </div>
                   <form action="">
@@ -32,8 +31,12 @@ function Footer() {
                         <input type="text" placeholder="Your name" id="" />
                       </div>
                       <div className="input-group">
-                        <label>Subject</label>
-                        <input type="text" placeholder="Enter subject" id="" />
+                        <label>Property Name</label>
+                        <input type="text" placeholder="Enter Property Name" id="" />
+                      </div>
+                      <div className="input-group">
+                        <label>Property Size</label>
+                        <input type="text" placeholder="Enter Property Size" id="" />
                       </div>
                       <div className="input-group">
                         <label>Email</label>
@@ -57,9 +60,11 @@ function Footer() {
                           <option selected unselectable="true">
                             —Please choose an option
                           </option>
-                          <option value="design">Graphic design</option>
-                          <option value="development">Web development</option>
-                          <option value="consulting">Consulting</option>
+                          <option value="End-to-End Legal Verification & Documentation">End-to-End Legal Verification & Documentation</option>
+                          <option value="Legal Verification Only">Legal Verification Only</option>
+                          <option value="Dual Legal Opinions">Dual Legal Opinions</option>
+                          <option value="Buyer Insights">Buyer Insights</option>
+                          <option value="Land Insurance (Legal Cost Coverage)">Land Insurance (Legal Cost Coverage)</option>
                         </select>
                       </div>
                       <div className="input-group">
@@ -72,18 +77,17 @@ function Footer() {
                 </div>
                 <div className="right">
                   <div className="title">
-                    <span>get in touch</span>
                     <h2>Email us</h2>
                   </div>
                   <div className="emails">
                     <div className="email">
-                      <span>For project inquires only:</span>
-                      <a href="mailto:kampusagency@gmail.com">
-                        hello@kampus.rw
+                      <span>For inquires only:</span>
+                      <a href="mailto:theopinionbench@gmail.com">
+                        theopinionbench@gmail.com
                       </a>
-                      <a href="tel:250733545477">(+250) 733 5454 77</a>
+                      <a href="tel:6202270983">(+91) 6202270983</a>
                     </div>
-                    <div className="email">
+                    {/* <div className="email">
                       <span>For other questions:</span>
                       <a href="mailto:kampusagency@gmail.com">
                         support@kampus.rw
@@ -93,7 +97,7 @@ function Footer() {
                     <div className="email">
                       <span>For career inquiries:</span>
                       <a href="mailto:kampusagency@gmail.com">hr@kampus.rw</a>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -103,7 +107,7 @@ function Footer() {
                     <Link to={"/"}>
                       <img src={logo} alt="kampus" />
                     </Link>
-                    <p>— Redefine Innovation</p>
+                    <p>— Navigating Land Law Digitally</p>
                   </div>
                   <div>
                     <ul className="social">
@@ -119,12 +123,7 @@ function Footer() {
                       </li>
                       <li>
                         <a href="">
-                          <TbBrandGithub />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="">
-                          <TbBrandLinktree />
+                          <TbBrandLinkedin />
                         </a>
                       </li>
                     </ul>
@@ -134,17 +133,17 @@ function Footer() {
                   <h2>Office Location</h2>
                   <ul>
                     <li>
-                      <a>KG 123 St.</a>
+                      <a>Bengaluru</a>
                     </li>
                     <li>
-                      <a>Kibagabaga</a>
+                      <a>Marathalli</a>
                     </li>
                     <li>
-                      <a>Kigali, Rwanda</a>
+                      <a>Karnataka</a>
                     </li>
                   </ul>
                 </div>
-                <div className="box">
+                {/* <div className="box">
                   <h2>Careers</h2>
                   <ul>
                     <li>
@@ -154,16 +153,16 @@ function Footer() {
                       <a href="mailto:kampusagency@gmail.com">Write to us</a>
                     </li>
                   </ul>
-                </div>
+                </div> */}
                 <div className="box">
-                  <h2>Project Inquiries</h2>
+                  <h2>Inquiries</h2>
                   <ul>
                     <li>
-                      <a href="">Interested in working with us?</a>
+                      <a href="">Interested in partnering with us?</a>
                     </li>
                     <li>
-                      <a href="mailto:kampusagency@gmail.com">
-                        hello@kampus.rw
+                      <a href="mailto:theopinionbench@gmail.com">
+                        theopinionbench@gmail.com
                       </a>
                     </li>
                   </ul>
@@ -176,7 +175,7 @@ function Footer() {
           <div className="container">
             <div className="content">
               <div className="left">
-                <p>&copy; {year} kampus. All rights reserved</p>
+                <p>&copy; {year} theopinionbench. All rights reserved</p>
               </div>
               <div className="right">
                 <ul>

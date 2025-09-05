@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
 import "./../styles/Components.scss";
-import logo from "./../assets/images/brand/logo-light.svg";
+import logo from "./../assets/images/brand/logo.svg";
 
 function Header() {
   const location = useLocation();
@@ -14,14 +14,14 @@ function Header() {
         <div className="content">
           <div className="logo">
             <Link to={"/"}>
-              <img src={logo} alt="Kampus(Logo)" />
+              <img src={logo} alt="The Opinion Bench (Logo)" />
             </Link>
           </div>
           <div className="links">
             <ul>
               <li>
                 <a
-                  href="/services"
+                  href="/#services"
                   className={currentPath === "/services" ? "active" : ""}
                 >
                   Services
@@ -29,15 +29,15 @@ function Header() {
               </li>
               <li>
                 <a
-                  href="/projects"
+                  href="/#testimonials "
                   className={currentPath === "/projects" ? "active" : ""}
                 >
-                  Portfolio
+                  Testimonials
                 </a>
               </li>
               <li>
                 <a
-                  href="/about"
+                  href="/#about"
                   className={currentPath === "/about" ? "active" : ""}
                 >
                   About
@@ -45,40 +45,10 @@ function Header() {
               </li>
               <li>
                 <a
-                  href="/blog"
-                  className={currentPath === "/blog" ? "active" : ""}
-                >
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/resources"
-                  className={currentPath === "/resources" ? "active" : ""}
-                >
-                  Resources
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/contact"
+                  href="/#contact"
                   className={currentPath === "/contact" ? "active" : ""}
                 >
                   Contact Us
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="action">
-            <ul>
-              <li>
-                <a href="/signin" className="auth">
-                  Sign In
-                </a>
-              </li>
-              <li>
-                <a href="/book-a-call" className="book">
-                  Book a Call
                 </a>
               </li>
             </ul>
